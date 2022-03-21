@@ -15,6 +15,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+        //Класс кабинета, в конструкторе инициализируются свойства, метод message выводит сообщение
         class CabinetStomatology: IItems
         {
             public CabinetStomatology(int _numberDoctors, int _numberPriems)
@@ -29,6 +30,7 @@ namespace WindowsFormsApp2
                 MessageBox.Show($"Количество докторов: {numberDoctors}\nКоличество завершенных приёмов: {numberPriems}");
             }
         }
+        //Класс с методом вывода примерных значений всех выполненных приёмов на одного доктора.
         class Priems: CabinetStomatology, IItems
         {
             double x;
