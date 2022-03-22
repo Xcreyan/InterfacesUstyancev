@@ -31,9 +31,14 @@ namespace WindowsFormsApp2
             }
         }
         //Класс с методом вывода примерных значений всех выполненных приёмов на одного доктора.
-        class Priems: CabinetStomatology, IItems
+        class Priems: CabinetStomatology, IItems, IMethods
         {
             double x;
+            //метод показа даты и времени
+            public void showdate()
+            {
+                MessageBox.Show($"Текущая дата и время: {DateTime.Now}");
+            }
             public Priems(int _numberDoctors, int _numberPriems) : base(_numberDoctors, _numberPriems)
             {
                 if (numberDoctors != 0)
@@ -87,6 +92,12 @@ namespace WindowsFormsApp2
             {
                 MessageBox.Show("Заполните все поля");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Priems priems = new Priems(1,0);
+            priems.showdate();
         }
     }
 }
