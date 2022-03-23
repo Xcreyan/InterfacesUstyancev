@@ -54,7 +54,9 @@ namespace WindowsFormsApp2
             {
                 if (numberDoctors != 0)
                 {
-                    MessageBox.Show($"Примерно приёмов на одного доктора: {x}");
+                    MessageBox.Show($"Количество докторов: {numberDoctors}" +
+                        $"\nКоличество завершенных приёмов: {numberPriems}" +
+                        $"\nПримерно приёмов на одного доктора: {x}");
                 }
                 else 
                 { 
